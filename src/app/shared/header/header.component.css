@@ -1,0 +1,12 @@
+.dropdown {
+    display: grid;
+    place-items: center;
+    margin-top: 9px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* Otros estilos para el contenedor si los hay */
+}
+
+.navbar-brand{
+    margin-left: 20px;
+}
