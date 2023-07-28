@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoService } from 'src/app/services/auth/carrito.service';
 import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
@@ -9,10 +10,18 @@ import { LoginService } from 'src/app/services/auth/login.service';
 export class HeaderComponent implements OnInit{
   userLoginOn:boolean=false;
   correo?:'';
-  constructor(private loginService: LoginService){}
+  viewCart: boolean = false;
+  myCart$ = this.carritoService.myCart$;
+
+  constructor(private loginService: LoginService, private carritoService:CarritoService){}
   getCorreo():string{
     return this.loginService.getCorreo()?? '';
   }
+
+  onToggleCart() {
+    this.viewCart = !this.viewCart
+  }
+
   ngOnInit(): void {
     this.loginService.currentUserLoginOn.subscribe({
       next:(userLoginOn)=>{

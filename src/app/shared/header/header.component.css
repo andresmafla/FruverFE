@@ -1,12 +1,117 @@
-.dropdown {
-    display: grid;
-    place-items: center;
-    margin-top: 9px;
+/* Estilos generales para la barra de navegación */
+.navbar {
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-outline {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el botón de búsqueda */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Estilos para el icono de carrito de compras */
+  .navbar-cart {
+    position: relative;
+    cursor: pointer;
+    margin-right:40px ;
+    margin-top: 10px;
+  }
+  
+  .navbar-cart-items {
+    position: absolute;
+    top: -1.8rem;
+    background-color: red;
+    color: #fff;
+    padding: 0px 4px;
+    border-radius: 50%;
+    font-size: 12px;
     margin-left: 20px;
-    margin-right: 20px;
-    /* Otros estilos para el contenedor si los hay */
-}
+    text-align: center;
+  }
 
-.navbar-brand{
-    margin-left: 20px;
+  .p{
+    margin-top: 2.0rem;
+    font-size: 0.8rem;
+    text-align: center;
 }
+  
+  .fa-shopping-cart {
+    font-size: 20px;
+  }
+  
+  /* Estilos para el botón de usuario y el menú desplegable */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 120px;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilos para el carrito emergente */
+  .cart {
+    display: none;
+    position: relative;
+    top: 70px;
+    right: 100px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  .cart.show {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    border-radius: 0.5rem;
+    border:1px solid #ffffff;
+    right:0px;
+    min-width: 40%;
+  }
+
+  .app-cart{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    
+}
+  

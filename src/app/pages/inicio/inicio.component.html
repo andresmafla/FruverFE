@@ -1,14 +1,9 @@
-<div class="card-container" *ngIf="productos">
-    <div class="card" *ngFor="let producto of productos">
-      <div class="card-header">
-        {{ producto.nombre }}
-      </div>
-      <div class="card-body">
-        <img [src]="'assets/' + producto.nombre + '.jpg'" alt="{{ producto.nombre }}" class="producto-imagen">
-        <p>ID: {{ producto.id_producto }}</p>
-        <p>Precio: {{ producto.precio }}</p>
-        <p>Cantidad disponible: {{ producto.cantidad_disponible }}</p>
-      </div>
-    </div>
+<div class="container">
+  <div class="container-title">
+    <h2 class="container-title_title">Todo lo que necesitas en tu tienda favorita</h2>
   </div>
+  <div class="container-products">
+    <app-productos></app-productos>
+  </div>
+</div>
   

@@ -1,0 +1,116 @@
+/* Estilos generales para el contenedor del carrito */
+.productCart-wrapper {
+  position: absolute;
+  top: 50%; /* Ajusta la posición verticalmente */
+  left: 50px; /* Ajusta la posición horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el elemento */
+  z-index: 9999; /* Asegura que el contenedor esté por encima de otros elementos */
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+  
+  /* Estilos para cada artículo en el carrito */
+  .productCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .productCart:last-child {
+    border-bottom: none; /* Elimina el borde inferior en el último artículo */
+  }
+  
+  /* Estilos para el cuerpo del artículo */
+  .productCart-body {
+    flex: 1;
+  }
+  
+  .productCart-body p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .productCart-body-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .productCart-body-info p {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el total del producto */
+  .productCart-total {
+    flex: 0.5;
+    text-align: right;
+  }
+  
+  .productCart-total p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Estilos para los botones de operadores */
+  .productCart-buttons-operators {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .productCart-buttons-operators i {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  .productCart-buttons-operators span {
+    font-size: 16px;
+  }
+  
+  /* Estilos para el botón de eliminar */
+  .productCart-buttons i.fa-trash {
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff0000;
+  }
+  
+  /* Estilos para el total del carrito */
+  .cartTotal {
+    margin-top: 10px;
+  }
+  
+  .cartTotal-total {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Estilos para el botón "Ir a mi cesta" */
+  .cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .cart-btn:hover {
+    background-color: #0056b3;
+  }
+  
