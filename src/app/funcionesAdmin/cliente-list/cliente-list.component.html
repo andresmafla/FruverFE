@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-9 dashboard">
+            <form class="form-inline">
+                <fieldset class="form-group col-sm-9"></fieldset>
+                <fieldset class="form-group col-sm-3">
+                    <a class="btn btn-primary btn-lg" [routerLink]="['/clientes/agregar']"><i class="fas fa-plus"></i> Nuevo Cliente</a>
+                </fieldset>
+            </form>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                  <tr class="row">
+                    <th class="col-sm-1">ID</th>
+                    <th class="col-sm-2">NOMBRE</th>
+                    <th class="col-sm-1">APELLIDO</th>
+                    <th class="col-sm-2">DIRECCIÓN</th>
+                    <th class="col-sm-2">TELÉFONO</th>
+                    <th class="col-sm-2">CORREO</th>
+                    <th class="col-sm-2">ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cliente of clientes | async" class="row">
+                    <td class="col-sm-1">{{ cliente.id_cliente }}</td>
+                    <td class="col-sm-2">{{ cliente.nombre }}</td>
+                    <td class="col-sm-1">{{ cliente.apellido }}</td>
+                    <td class="col-sm-2">{{ cliente.direccion }}</td>
+                    <td class="col-sm-2">{{ cliente.telefono }}</td>
+                    <td class="col-sm-2">{{ cliente.correo }}</td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-info" [routerLink]="['/clientes/editar/', cliente.id_cliente]"><i class="fas fa-edit"></i></a>
+                        </fieldset>
+                    </td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-danger" (click)="borrarCliente(cliente.id_cliente)"><i class="fas fa-trash-alt"></i></a>
+                        </fieldset>
+                    </td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

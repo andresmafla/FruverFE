@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-9 dashboard">
+            <form (ngSubmit)="onSubmit()" #productoForm="ngForm">
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Nombre</label>
+                        <input type="text" class="form-control" required [(ngModel)]="cliente.nombre" name="nombre">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Apellido</label>
+                        <input type="text" class="form-control" required [(ngModel)]="cliente.apellido" name="apellido">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Dirección</label>
+                        <input type="text" class="form-control" required [(ngModel)]="cliente.direccion" name="direccion">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Telefono</label>
+                        <input type="text" class="form-control" required [(ngModel)]="cliente.telefono" name="telefono">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Correo Electrónico</label>
+                        <input type="text" class="form-control" required [(ngModel)]="cliente.correo" name="correo">
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary"
+                            [disabled]="!productoForm.form.valid">Guardar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

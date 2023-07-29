@@ -16,6 +16,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductListComponent } from './funcionesAdmin/product-list/product-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductEditComponent } from './funcionesAdmin/product-edit/product-edit.component';
+import { ClienteListComponent } from './funcionesAdmin/cliente-list/cliente-list.component';
+import { ClienteEditComponent } from './funcionesAdmin/cliente-edit/cliente-edit.component';
+import { AdministradorEditComponent } from './funcionesAdmin/administrador-edit/administrador-edit.component';
+import { AdministradorListComponent } from './funcionesAdmin/administrador-list/administrador-list.component';
 
 
 @NgModule({
@@ -31,6 +35,10 @@ import { ProductEditComponent } from './funcionesAdmin/product-edit/product-edit
     ProductListComponent,
     MenuComponent,
     ProductEditComponent,
+    ClienteListComponent,
+    ClienteEditComponent,
+    AdministradorEditComponent,
+    AdministradorListComponent,
   ],
   imports: [
     BrowserModule,
