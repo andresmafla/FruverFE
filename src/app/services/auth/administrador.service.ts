@@ -11,7 +11,7 @@ export class AdministradorService {
   constructor(private http:HttpClient) { }
 
   obtenerAdministradores(){
-    return this.http.get<Administrador[]>(`${this.BASE_URL}/administrador`);
+    return this.http.get<Administrador[]>(`${this.BASE_URL}/administradores`);
   }
 
   obtenerAdministrador(id_administrador:string){
@@ -23,11 +23,11 @@ export class AdministradorService {
     return this.http.post<string>(`${this.BASE_URL}/administrador`,administrador);
   }
 
-  actualizarCliente(administrador: Administrador){
+  actualizarAdministrador(administrador: Administrador){
     return this.http.put<string>(`${this.BASE_URL}/administrador/${administrador.id_administrador}`,administrador);
   }
 
-  borrarCliente(id_administrador:string){
+  borrarAdministrador(id_administrador:string){
     return this.http.delete<string>(`${this.BASE_URL}/administrador/${id_administrador}`);
   }
 }

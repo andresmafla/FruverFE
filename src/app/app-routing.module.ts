@@ -7,6 +7,8 @@ import { ProductListComponent } from './funcionesAdmin/product-list/product-list
 import { ProductEditComponent } from './funcionesAdmin/product-edit/product-edit.component';
 import { ClienteListComponent } from './funcionesAdmin/cliente-list/cliente-list.component';
 import { ClienteEditComponent } from './funcionesAdmin/cliente-edit/cliente-edit.component';
+import { AdministradorListComponent } from './funcionesAdmin/administrador-list/administrador-list.component';
+import { AdministradorEditComponent } from './funcionesAdmin/administrador-edit/administrador-edit.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/inicio', pathMatch:'full'},
@@ -23,6 +25,11 @@ const routes: Routes = [
   {path:'clientes', component:ClienteListComponent},
   {path:'clientes/editar/:id_cliente', component:ClienteEditComponent},
   {path:'clientes/agregar', component:ClienteEditComponent},
+
+  //rutas para el manejo de administradores
+  {path:'administradores', component:AdministradorListComponent},
+  {path:'administradores/editar/:id_administrador', component:AdministradorEditComponent},
+  {path:'administradores/agregar', component:AdministradorEditComponent},
 ];
 
 @NgModule({

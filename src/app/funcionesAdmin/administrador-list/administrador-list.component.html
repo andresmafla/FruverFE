@@ -1,1 +1,46 @@
-<p>administrador-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-9 dashboard">
+            <form class="form-inline">
+                <fieldset class="form-group col-sm-7"></fieldset>
+                <fieldset class="form-group col-sm-5">
+                    <a class="btn btn-primary btn-lg" [routerLink]="['/administradores/agregar']"><i class="fas fa-plus"></i> Nuevo Administrador</a>
+                </fieldset>
+            </form>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                  <tr class="row">
+                    <th class="col-sm-2">ID</th>
+                    <th class="col-sm-2">NOMBRE</th>
+                    <th class="col-sm-3">APELLIDO</th>
+                    <th class="col-sm-3">CORREO</th>
+                    <th class="col-sm-2">ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let administrador of administradores | async" class="row">
+                    <td class="col-sm-2">{{ administrador.id_administrador }}</td>
+                    <td class="col-sm-2">{{ administrador.nombre }}</td>
+                    <td class="col-sm-3">{{ administrador.apellido }}</td>
+                    <td class="col-sm-3">{{ administrador.correo_electronico }}</td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-info" [routerLink]="['/administradores/editar/', administrador.id_administrador]"><i class="fas fa-edit"></i></a>
+                        </fieldset>
+                    </td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-danger" (click)="borrarAdministrador(administrador.id_administrador)"><i class="fas fa-trash-alt"></i></a>
+                        </fieldset>
+                    </td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

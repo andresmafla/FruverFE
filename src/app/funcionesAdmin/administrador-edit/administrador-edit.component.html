@@ -1,1 +1,43 @@
-<p>administrador-edit works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-9 dashboard">
+            <form (ngSubmit)="onSubmit()" #productoForm="ngForm">
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Nombre</label>
+                        <input type="text" class="form-control" required [(ngModel)]="administrador.nombre" name="nombre">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Apellido</label>
+                        <input type="text" class="form-control" required [(ngModel)]="administrador.apellido" name="apellido">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Correo electronico</label>
+                        <input type="text" class="form-control" required [(ngModel)]="administrador.correo_electronico" name="correo_electronico">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="nombre">Contraseña</label>
+                        <input type="text" class="form-control" required [(ngModel)]="administrador.contrasena" name="contrasena">
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary"
+                            [disabled]="!productoForm.form.valid">Guardar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
