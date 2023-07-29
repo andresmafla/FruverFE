@@ -6,6 +6,7 @@
     width: 100vw;
     position: relative;
     background-color: white;
+    margin-bottom: 200px;
     &-title{
         margin-bottom: 1.5rem;
     }

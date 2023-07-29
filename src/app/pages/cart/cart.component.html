@@ -12,17 +12,17 @@
       </div>
       <div class="productCart-buttons">
         <div class="productCart-buttons-operators">
-          <i
-            class="fa-solid fa-minus"
-            (click)="updateUnits('minus', product.id_producto)"
-          ></i>
+          <i class="menos" (click)="updateUnits('minus', product.id_producto)">
+            <img src="../../../assets/imagenes/dash-circle.svg" alt="">
+          </i>
           <span>{{ product.cantidad }}</span>
-          <i
-            class="fa-solid fa-plus"
-            (click)="updateUnits('add', product.id_producto)"
-          ></i>
+          <i class="mas" (click)="updateUnits('add', product.id_producto)">
+            <img src="../../../assets/imagenes/plus-circle.svg" alt="">
+          </i>
         </div>
-        <i class="fa-solid fa-trash" (click)="deleteProduct(product.id_producto)"></i>
+        <i class="eliminar" (click)="deleteProduct(product.id_producto)">
+          <img src="../../../assets/imagenes/x-circle.svg" alt="">
+        </i>
       </div>
     </article>
     <div class="cartTotal">

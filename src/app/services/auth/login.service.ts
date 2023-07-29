@@ -22,7 +22,7 @@ export class LoginService {
         if (response && response.token) {
           console.log("ingreso exitoso");
           console.log(response.token);
-          this.currentUserLoginOn.next(true); // Coloca esta línea aquí, dentro de la función tap.
+          this.currentUserLoginOn.next(true);
           localStorage.setItem('token', response.token);
         }
       })

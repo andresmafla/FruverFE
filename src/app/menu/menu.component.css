@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  h4 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .menu {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.2s;
+  }
+  
+  a:hover {
+    color: #333;
+  }
+  
+  .submenu {
+    display: none;
+    margin-left: 20px;
+  }
+  
+  ul li:hover .submenu {
+    display: block;
+  }
+  
+  

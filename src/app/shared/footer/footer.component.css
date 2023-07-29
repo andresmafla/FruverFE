@@ -1,4 +1,5 @@
 .fixed-bottom {
+    margin-top: 300px;
     position: fixed;
     left: 0;
     bottom: 0;

@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-9 dashboard">
+            <form class="form-inline">
+                <fieldset class="form-group col-sm-9"></fieldset>
+                <fieldset class="form-group col-sm-3">
+                    <a class="btn btn-primary btn-lg" [routerLink]="['/productos/agregar']"><i class="fas fa-plus"></i> Nuevo Producto</a>
+                </fieldset>
+            </form>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                  <tr class="row">
+                    <th class="col-sm-2">ID</th>
+                    <th class="col-sm-3">NOMBRE</th>
+                    <th class="col-sm-3">PRECIO</th>
+                    <th class="col-sm-2">CANTIDAD</th>
+                    <th class="col-sm-2">ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let producto of productos | async" class="row">
+                    <td class="col-sm-2">{{ producto.id_producto }}</td>
+                    <td class="col-sm-3">{{ producto.nombre }}</td>
+                    <td class="col-sm-3">{{ producto.precio }}</td>
+                    <td class="col-sm-2">{{ producto.cantidad_disponible }}</td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-info" [routerLink]="['/productos/editar/', producto.id_producto]"><i class="fas fa-edit"></i></a>
+                        </fieldset>
+                    </td>
+                    <td class="col-sm-1">
+                        <fieldset class="form-group col-sm-1">
+                            <a class="btn btn-danger" (click)="borrarProducto(producto.id_producto)"><i class="fas fa-trash-alt"></i></a>
+                        </fieldset>
+                    </td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

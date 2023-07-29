@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 100px;
   }
   
   /* Estilos para el artículo "product" */
